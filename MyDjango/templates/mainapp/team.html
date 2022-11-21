@@ -1,0 +1,18 @@
+{%block title%}
+    {{ title }}
+{% endblock %}
+
+{% block content %}
+    {% for el in otdel %}
+    <div class="alert alert -warning mt-2">
+    <h3>{{el.name_team}}</h3>
+    <h3>Создан: {{el.create_at}}</h3>
+
+        <br>
+        <br>
+        <br>
+
+    {%endfor%}
+    </div>
+
+{% endblock%}

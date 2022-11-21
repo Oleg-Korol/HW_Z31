@@ -1,0 +1,18 @@
+{%block title%}
+    {{ title }}
+{% endblock %}
+
+{% block content %}
+    {% for el in manager %}
+    <div class="alert alert -warning mt-2">
+    <h3>{{el.last_name}} {{el.first_name}} {{el.patronymic}} </h3>
+    <h3>Номер телефона:{{el.phone_number}}</h3>
+
+        <br>
+        <br>
+        <br>
+
+    {%endfor%}
+    </div>
+
+{% endblock %}

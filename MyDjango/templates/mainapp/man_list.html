@@ -1,0 +1,21 @@
+{%block title%}
+    {{ title }}
+
+{% endblock %}
+
+
+{% block content %}
+    {% for el in man %}
+    <div class="alert alert -warning mt-2">
+    <h3>{{ el.id }}. {{el.manufacture_name}}</h3>
+        <h3>Страна производства:  {{el.country_of_manufacture}}</h3>
+        <h3>История:  {{el.history}}</h3>
+        <br>
+        <br>
+        <br>
+
+
+    {%endfor%}
+    </div>
+
+{% endblock %}

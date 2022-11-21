@@ -1,6 +1,12 @@
 from django.contrib import admin
-from .models import Car
+from .models import *
 
-admin.site.register(Car)
+
 
 # Register your models here.
+admin.site.register(Car)
+admin.site.register(Stock)
+admin.site.register(Manufacture)
+admin.site.register(Manager)
+admin.site.register(Shop_manager)
+admin.site.register(Team)

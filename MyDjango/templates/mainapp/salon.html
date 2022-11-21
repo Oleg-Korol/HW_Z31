@@ -1,0 +1,19 @@
+{%block title%}
+    {{ title }}
+{% endblock %}
+
+{% block content %}
+    {% for el in salon %}
+    <div class="alert alert -warning mt-2">
+    <h3>{{el.name}}</h3>
+        <h3>{{el.sity}}</h3>
+        <h3>{{el.location}}</h3>
+        <h3>{{el.phone_number}}</h3>
+        <br>
+        <br>
+        <br>
+
+    {%endfor%}
+    </div>
+
+{% endblock %}
