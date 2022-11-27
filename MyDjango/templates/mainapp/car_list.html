@@ -1,0 +1,41 @@
+
+{% load static %}
+
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="{% static 'css/bacfon.css' %}">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+{%block title%}
+   <h1 align="center">{{ title }}</h1>
+{% endblock %}
+
+{% block content %}
+    {% for el in auto %}
+    <div class="alert alert -warning mt-2">
+        {% if el.last_name == 'Opel Astra'  %}
+                    <h3> {{el.id}} {{el.last_name}}</h3>
+                   <img  src="/media/image_car/Opel_Astra.jpg" width="1000" height="600">
+                    <h4> {{ el.notes }}</h4>
+        {%endif%}
+        {% if el.last_name == 'Peugeot Boxer' %}
+                     <h3> {{el.id}} {{el.last_name}}</h3>
+                     <img  src="/media/image_car/Boxer.jpg" width="1000" height="600">
+                     <h4> {{ el.notes }}</h4>
+        {%endif%}
+        {% if el.last_name == 'Renault Duster' %}
+                      <h3> {{el.id}} {{el.last_name}}</h3>
+                     <img  src="/media/image_car/Duster.jpg" width="1000" height="600">
+                      <h4> {{ el.notes }}</h4>
+        {%endif%}
+        {% if el.last_name == 'BMW X3' %}
+                     <h3> {{el.id}} {{el.last_name}}</h3>
+                     <img  src="/media/image_car/x3.jpg" width="1000" height="600">
+                      <h4> {{ el.notes }}</h4>
+        {%endif%}
+
+    {%endfor%}
+    </div>
+
+{% endblock %}
+
+

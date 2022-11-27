@@ -1,0 +1,24 @@
+{% load static %}
+
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="{% static 'css/bacfon.css' %}">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    {%block title%}
+   <h1 align="center">{{ title }}</h1>
+{% endblock %}
+
+    Current datetime:{% now "jS F Y H:i" %}
+
+</head>
+<body>
+<object <embed src="{% static 'txt/a.txt' %}"><object
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/bacfon.css' %}">
+{%block title%}
+    <h1 align="center">{{ title }}</h1>
+{% endblock %}
+
+
+{% block content %}
+    {% for el in manshop %}
+        <img  src="/media/ava/prodajnic.png" width="300" height="200" >
+        <div class="alert alert -warning mt-2">
+        <h3>{{el.last_name}} {{el.first_name}} {{el.patronymic}} </h3>
+        <h3>Номер телефона:{{el.phone_number}}</h3>
+
+        <br>
+        <br>
+        <br>
+
+    {%endfor%}
+    </div>
+
+
+
+{% endblock%}
