@@ -1,0 +1,33 @@
+{% load static %}
+
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="{% static 'css/bacfon.css' %}">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+{%block title%}
+   <h1 align="center">{{ title }}</h1>
+{% endblock %}
+
+{% block content %}
+    {% for el in salon %}
+    <div class="alert alert -warning mt-2">
+        {% if el.name == 'АвтоМолл'  %}
+             <img  src="/media/foto_salon/avtomoll.jpg" width="600" height="400">
+            <h3>{{el.name}}</h3>
+            <h3>{{el.sity}}</h3>
+            <h3>{{el.location}}</h3>
+            <h3>{{el.phone_number}}</h3>
+        {%endif%}
+        <br>
+       {% if el.name == 'Шоурум'  %}
+             <img  src="/media/foto_salon/Shouroom.jpg" width="600" height="400">
+            <h3>{{el.name}}</h3>
+            <h3>{{el.sity}}</h3>
+            <h3>{{el.location}}</h3>
+            <h3>{{el.phone_number}}</h3>
+        {%endif%}
+
+    {%endfor%}
+    </div>
+
+{% endblock %}

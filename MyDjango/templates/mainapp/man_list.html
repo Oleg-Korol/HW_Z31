@@ -1,0 +1,72 @@
+{% load static %}
+
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="{% static 'css/bacfon.css' %}">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+{%block title%}
+    <h1 align="center">{{ title }}</h1>
+{% endblock %}
+
+{% block content %}
+    {% for el in man %}
+    <div class="alert alert -warning mt-2">
+        {% if el.manufacture_name == 'Bmw'  %}
+            <h2> {{el.manufacture_name}}</h2>
+            <h3>Страна производства:  {{el.country_of_manufacture}}</h3>
+            <img  src="/media/logo/bmw_logo.jpg" width="300" height="200" >
+            <h3 > История:  {{el.history}}</h3>
+        {%endif%}
+        <br>
+        {% if el.manufacture_name == 'Opel'  %}
+            <h2> {{el.manufacture_name}}</h2>
+            <h3>Страна производства:  {{el.country_of_manufacture}}</h3>
+            <img  src="/media/logo/opel-logo.png" width="200" height="200" >
+            <h3>История:  {{el.history}}</h3>
+        {%endif%}
+        <br>
+        {% if el.manufacture_name == 'Renault'  %}
+            <h2> {{el.manufacture_name}}</h2>
+            <h3>Страна производства:  {{el.country_of_manufacture}}</h3>
+            <img  src="/media/logo/renault-logo.png" width="200" height="200" >
+            <h3>История:  {{el.history}}</h3>
+        {%endif%}
+        <br>
+        {% if el.manufacture_name == 'Mazda'  %}
+            <h3> {{el.manufacture_name}}</h3>
+            <h3>Страна производства:  {{el.country_of_manufacture}}</h3>
+            <img  src="/media/logo/mazda__logo.jpg" width="200" height="200" >
+            <h3>История:  {{el.history}}</h3>
+        {%endif%}
+        <br>
+        {% if el.manufacture_name == 'Ford'  %}
+            <h2> {{el.manufacture_name}}</h2>
+            <h3>Страна производства:  {{el.country_of_manufacture}}</h3>
+            <img  src="/media/logo/ford-logo.png" width="350" height="200" >
+            <h3>История:  {{el.history}}</h3>
+        {%endif%}
+        <br>
+        {% if el.manufacture_name == 'Peugeot'  %}
+            <h2> {{el.manufacture_name}}</h2>
+            <h3>Страна производства:  {{el.country_of_manufacture}}</h3>
+            <img  src="/media/logo/peugeot_logo.jpeg" width="200" height="200" >
+            <h3>История:  {{el.history}}</h3>
+        {%endif%}
+        <br>
+        {% if el.manufacture_name == 'Honda'  %}
+            <h2> {{el.manufacture_name}}</h2>
+            <h3>Страна производства:  {{el.country_of_manufacture}}</h3>
+            <img  src="/media/logo/honda_logo.jpg" width="200" height="200" >
+            <h3>История:  {{el.history}}</h3>
+        {%endif%}
+         <br>
+        {% if el.manufacture_name == 'Lada'  %}
+            <h2> {{el.manufacture_name}}</h2>
+            <h3>Страна производства:  {{el.country_of_manufacture}}</h3>
+            <img  src="/media/logo/lada.webp" width="200" height="200" >
+            <h3>История:  {{el.history}}</h3>
+        {%endif%}
+    {%endfor%}
+    </div>
+
+{% endblock %}
