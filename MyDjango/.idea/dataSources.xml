@@ -5,14 +5,14 @@
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://192.168.100.6:7432/koroldb</jdbc-url>
+      <jdbc-url>jdbc:postgresql://192.168.56.101:7432/koroldb</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
-    <data-source source="LOCAL" name="koroldb2" uuid="21362baa-bddc-4205-ab08-965bc3ad0a99">
+    <data-source source="LOCAL" name="koroldb [2]" uuid="8aae0374-0be2-40da-ad2b-439dc49735d1">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://192.168.100.6:7432/koroldb</jdbc-url>
+      <jdbc-url>jdbc:postgresql://192.168.56.101:7432/koroldb</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>

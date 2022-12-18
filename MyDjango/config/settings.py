@@ -43,7 +43,12 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'social_django',
     'django_registration',
+    'crispy_forms',
+    'ckeditor',
+    'ckeditor_uploader',
+    'rest_framework',
     'mainapp',
+    'api',
 
 ]
 
@@ -74,6 +79,19 @@ TEMPLATES = [
         },
     },
 ]
+
+
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly',
+
+    ],
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+    'PAGE_SIZE': 2
+}
+
 
 WSGI_APPLICATION = 'config.wsgi.application'
 
@@ -142,6 +160,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
+CKEDITOR_UPLOAD_PATH = "uploads/"
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
