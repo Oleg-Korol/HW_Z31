@@ -1,6 +1,7 @@
+
 from django.db import models
 from ckeditor_uploader.fields import RichTextUploadingField
-from django import forms
+
 
 
 # Create your models here.
@@ -45,11 +46,11 @@ class Car(models.Model):
     number_of_seats = models.IntegerField(blank=False,
                                           verbose_name=u"Колличество мест")
     maximum_speed = models.IntegerField(blank=False,
-                                        verbose_name=u"Максимальная скорость,км/ч")
+                                        verbose_name=u"Максю скорость,км/ч")
     curb_weight = models.IntegerField(blank=False,
                                       verbose_name=u"Снаряженная масса,кг")
     euroncap = models.IntegerField(blank=False,
-                                   verbose_name=u"рейтинг безопасности автомобилей euroncap (кол-во звезд)")
+                                   verbose_name=u"Рейтинг безопасности ")
     price = models.IntegerField(blank=False, verbose_name=u"Цена(y.e.)")
     sale_price = models.IntegerField(blank=True, null=True,
                                      verbose_name=u"Цена c учетом скидки(y.e.)")
@@ -84,7 +85,8 @@ class Manufacture(models.Model):
                                    verbose_name=u"Логотип", upload_to='logo')
 
     def __str__(self):
-        return f'Производитель - {self.manufacture_name} - страна {self.country_of_manufacture}'
+        return f'Производитель - {self.manufacture_name} - ' \
+               f'страна {self.country_of_manufacture}'
 
 
 # Салоны
@@ -118,7 +120,8 @@ class Stock(models.Model):
                              upload_to='foto_salon')
 
     def __str__(self):
-        return f'Cалон по продаже автомобилей {self.name} расположенный в городе {self.sity} по адресу {self.location}'
+        return f'Cалон по продаже автомобилей {self.name} ' \
+               f'расположенный в городе {self.sity} по адресу {self.location}'
 
 
 class Manager(models.Model):
@@ -143,7 +146,8 @@ class Manager(models.Model):
                                upload_to='ava')
 
     def __str__(self):
-        return f'Управляющий  {self.first_name} {self.last_name} {self.patronymic} '
+        return f'Управляющий  {self.first_name} {self.last_name}' \
+               f' {self.patronymic} '
 
 
 class Shop_manager(models.Model):
@@ -343,3 +347,20 @@ class Record(models.Model):
                f'Номер телефона {self.phone_number}.' \
                f'Имя клиента {self.first_name}.,' \
                f'Выбор сервиса:  {self.service}'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -13,11 +13,13 @@ from .forms import RecordForm
 from .models import *
 from django.shortcuts import render
 
+from django.views.decorators.cache import cache_page
 
+@cache_page(60 * 15)
 def index(request):
     return render(request, 'mainapp/index.html', {'title': 'Главная страница'})
 
-
+@cache_page(60 * 15)
 def manufacture(request):
     man = Manufacture.objects.all()
     return render(request, 'mainapp/man_list.html',
