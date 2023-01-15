@@ -96,7 +96,7 @@ app.conf.beat_schedule = {
     # Выполняется каждый понедельник в 08:30 утра.
     'add-every-monday-morning': {
         'task': 'mainapp.tasks.message_me',
-        'schedule':crontab(hour=2, minute=10),
+        'schedule':crontab(hour=8, minute=30),
     },
 }
 app.conf.timezone = 'Europe/Minsk'
