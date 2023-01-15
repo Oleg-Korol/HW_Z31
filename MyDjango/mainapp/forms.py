@@ -69,8 +69,9 @@ class RecordForm(ModelForm):
             self.helper.layout = Layout(
                 'first_name ',
                 'car_model ',
-                'type_of_repair ',
+                'time_servise ',
                 'phone_number ',
+                'client_email',
                 FieldWithButtons('create_at ',StrictButton(
                     '',
                     css_class='gliphykon gliphycon-calendar'),
