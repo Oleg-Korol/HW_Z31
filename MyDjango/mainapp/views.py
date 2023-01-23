@@ -14,6 +14,10 @@ from .models import *
 from django.shortcuts import render
 
 from django.views.decorators.cache import cache_page
+from .tasks import message_user
+
+
+# from .message import message_user
 
 @cache_page(60 * 15)
 def index(request):
@@ -244,7 +248,7 @@ class JournalView(TemplateView):
         return JsonResponse({'status':'success'})
 
 
-
+from .tasks import message_user
 
 
 class RecordAddView(CreateView):
@@ -253,8 +257,11 @@ class RecordAddView(CreateView):
     form_class = RecordForm
 
     def get_success_url(self):
-        return (
-            f'{reverse("serv")}?status_massage=Изменения успешно сохранены!'
+        record = Record.objects.last()
+        user_mail = record.client_email
+        name = record.first_name
+        message_user.delay(user_mail,name)
+        return (f'{reverse("serv")}?status_massage=Изменения успешно сохранены!'
         )
 
     def post(self, request, *args, **kwargs):
@@ -265,3 +272,10 @@ class RecordAddView(CreateView):
         return super(RecordAddView,self).post(
             request,*args,**kwargs,
         )
+
+
+
+
+
+
+

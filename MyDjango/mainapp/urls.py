@@ -29,6 +29,7 @@ urlpatterns = [
     path('serv',views.auto_service,name =  'serv'),
     url(r'^journal/(?P<pk>\d +)?/?$',JournalView.as_view(),name =  'journal'),
     # url(r'^team/add/$',views.TeamAddView.as_view(),name='team_add'),
+    # url(r'^service/add/$',views.RecordAddView,name='record_add')
     url(r'^service/add/$',views.RecordAddView.as_view(),name='record_add')
     ]
 

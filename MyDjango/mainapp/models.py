@@ -340,6 +340,11 @@ class Record(models.Model):
                                 verbose_name=u"Выберите салон",
                                 blank=True, null=True,
                                 on_delete=models.SET_NULL)
+    client_email = models.EmailField(verbose_name=u'Email',
+                                     blank=False,
+                                     null=True)
+
+    time_servise = models.DateField(verbose_name=u"День  ТО")
 
     def __str__(self):
         return f'Автомобиль {self.car_model}.,' \
