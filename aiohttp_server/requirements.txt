@@ -1,0 +1,7 @@
+SQLAlchemy
+python-dotenv
+asyncio
+aiohttp
+aiohttp-jinja2
+gino
+alembic
